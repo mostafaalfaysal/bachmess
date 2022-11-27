@@ -28,7 +28,7 @@ class AdminController extends Controller
         return view('backend.partial.pages.admin.payment');
     }
     public function mealManage(){
-        return view('backend.partial.pages.admin.meal');
+        return view('backend.addMeal');
     }
     public function adminReport(){
         return view('backend.partial.pages.admin.report');
@@ -42,6 +42,9 @@ class AdminController extends Controller
     }
     public function makeFine(){
         return view('backend.makeFine');
+    }
+    public function mealReport(){
+        return view('backend.mealReport');
     }
     public function createMember(Request $request){
 //        dd($request->all());

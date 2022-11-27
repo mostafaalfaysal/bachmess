@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\AdminController;
+use App\Http\Controllers\frontend\MemberController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,8 +26,16 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/members-list', [AdminController::class, 'membersList'])->name('member-list');
     Route::get('/make-payment', [AdminController::class, 'adminMakePay'])->name('admin-pay');
     Route::get('/meal', [AdminController::class, 'mealManage'])->name('meal-manage');
-    Route::get('/report', [AdminController::class, 'adminReport'])->name('admin-report');
+    Route::get('/mealReport', [AdminController::class, 'mealReport'])->name('meal-report');
     Route::get('/make-payment', [AdminController::class, 'makePayment'])->name('make-Payment');
     Route::get('/bills', [AdminController::class,'bills'])->name('bills');
     Route::get('/make-fine', [AdminController::class,'makeFine'])->name('make-Fine');
+});
+Route::group(['prefix' => 'member'], function () {
+    Route::get('/', [MemberController::class, 'memberPanel'])->name('memberDash');
+    Route::get('/master', [MemberController::class, 'masterMember'])->name('masterMember');
+    Route::get('/make-payment', [MemberController::class, 'memberMakePay'])->name('memberPay');
+    Route::get('/meal', [MemberController::class, 'mealManage'])->name('mealManage');
+    Route::get('/report', [MemberController::class, 'memberReport'])->name('memberReport');
+    Route::get('/bills', [MemberController::class,'bills'])->name('bill');
 });

@@ -2,7 +2,7 @@
 @section('content')
         <div class="card shadow mb-4 container px-2 mx-auto animated--grow-in">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary text-xl-center">Make Payment</h6>
+                <h6 class="m-0 font-weight-bold text-success text-xl-center">Make Payment</h6>
             </div>
             <div class="card-body mx-auto mb-auto">
                 <head>
@@ -26,10 +26,10 @@
                             <input class="form-control item" type="number" id="amount" placeholder="Amount">
                         </div>
                         <div class="form-group">
-                            <input class="form-control item" type="text" id="fineNote" placeholder="Reason of Fine">
+                            <input class="form-control item" type="text" id="fineNote" placeholder="Description">
                         </div>
                         <div class="form-group">
-                            <input type="date" class="form-control form-control-user" id="DOB" data-placeholder="Fine Date">
+                            <input type="date" class="form-control form-control-user" id="DOB" data-placeholder="Payment Date">
                             <style>input[type="date"]::before {
                                     content: attr(data-placeholder);
                                     width: 100%;
@@ -40,10 +40,7 @@
                         </div>
                     </form>
                 </div>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.bundle.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-                <script src="assets/js/script.min.js"></script>
+{{----}}
             </div>
         </div>
 

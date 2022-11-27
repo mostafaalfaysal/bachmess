@@ -1,10 +1,10 @@
 @extends('backend.master')
 @section('content')
-    <div class="card shadow mb-4 container px-2 mx-auto animated--grow-in">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-success text-xl-center">Make Fine</h6>
-        </div>
-        <div class="card-body mx-auto mb-4">
+        <div class="card shadow mb-4 container px-2 mx-auto animated--grow-in">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-success text-xl-center">Make Payment</h6>
+            </div>
+            <div class="card-body mx-auto mb-auto">
                 <head>
                     <meta charset="utf-8">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -29,7 +29,7 @@
                             <input class="form-control item" type="text" id="fineNote" placeholder="Description">
                         </div>
                         <div class="form-group">
-                            <input type="date" class="form-control form-control-user" id="DOB" data-placeholder="Fine Date">
+                            <input type="date" class="form-control form-control-user" id="DOB" data-placeholder="Payment Date">
                             <style>input[type="date"]::before {
                                     content: attr(data-placeholder);
                                     width: 100%;
@@ -40,7 +40,7 @@
                         </div>
                     </form>
                 </div>
-                </body>
+            </div>
         </div>
-    </div>
+
 @endsection
