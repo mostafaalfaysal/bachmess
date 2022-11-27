@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
-use App\Models\meal;
-use App\Models\sign;
+use App\Models\Member;
+use App\Models\Meal;
+use App\Models\Bill;
 use Illuminate\Http\Request;
 
 
@@ -16,7 +17,8 @@ class AdminController extends Controller
         return view('backend.master');
     }
     public function membersList(){
-        return view('backend.memberList');
+        $members = Member::get();
+        return view('backend.memberList',compact('members'));
     }
     public function member(){
         return view('backend.partial.pages.admin.member');
@@ -46,22 +48,48 @@ class AdminController extends Controller
     public function mealReport(){
         return view('backend.mealReport');
     }
-    public function createMember(Request $request){
+    public function addingMember(Request $request){
 //        dd($request->all());
-        sign::create([
-            'member_email'=>$request->member_email,
-            'member_password'=>$request->member_password,
-            'member_name'=>$request->member_name,
-            'member_phone'=>$request->member_phone,
+        member::create([
+            'memberFirstName'=>$request->memberFirstName,
+            'memberLastName'=>$request->memberLastName,
+            'memberEmail'=>$request->memberEmail,
+            'fathersName'=>$request->fathersName,
+            'mothersName'=>$request->mothersName,
+            'dateOfBirth'=>$request->dateOfBirth,
+            'nidNumber'=>$request->nidNumber,
+            'permanentAddress'=>$request->permanentAddress,
+            'phoneNumber'=>$request->phoneNumber,
+            'numberOfSeat'=>$request->numberOfSeat,
+            'memberPassword'=>$request->memberPassword,
         ]);
         return redirect()->back();
 
     }
-    public function MealCount(Request $request){
-//        dd($request->all());
+    public function addingMeal(Request $request)
+    {
         meal::create([
-            'member_name'=>$request->member_name,
-            'meal_count'=>$request->meal_count,
+            'memberID'=>$request->memberID,
+            'memberName'=>$request->memberName,
+            'amountMeals'=>$request->amountMeals,
+            'fineNote'=>$request->fineNote,
+            'mealDate'=>$request->mealDate,
+
         ]);
+        return redirect()->back();
+    }
+    public function addingBill(Request $request)
+    {
+        bill::create([
+            'apartmentBill'=>$request->apartmentBill,
+            'maintenanceBill'=>$request->maintenanceBill,
+            'gasBill'=>$request->gasBill,
+            'servantBill'=>$request->servantBill,
+            'waterBill'=>$request->waterBill,
+            'internetBill'=>$request->internetBill,
+            'electricityBill'=>$request->electricityBill,
+
+        ]);
+        return redirect()->back();
     }
 }

@@ -30,6 +30,9 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/make-payment', [AdminController::class, 'makePayment'])->name('make-Payment');
     Route::get('/bills', [AdminController::class,'bills'])->name('bills');
     Route::get('/make-fine', [AdminController::class,'makeFine'])->name('make-Fine');
+    Route::post('/adding-Member', [AdminController::class,'addingMember'])->name('addingMember');
+    Route::post('/adding-Meal', [AdminController::class,'addingMeal'])->name('addingMeal');
+    Route::post('/adding-bill', [AdminController::class, 'addingBill'])->name('addingBill');
 });
 Route::group(['prefix' => 'member'], function () {
     Route::get('/', [MemberController::class, 'memberPanel'])->name('memberDash');

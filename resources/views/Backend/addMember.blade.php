@@ -35,34 +35,35 @@
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Register Member</h1>
                         </div>
-                        <form class="user">
+                        <form class="user" action="{{route('addingMember')}}" method="POST">
+                            @csrf
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                           placeholder="First Name">
+                                           placeholder="First Name" name="memberFirstName">
                                 </div>
                                 <div class="col-sm-6">
                                     <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                           placeholder="Last Name">
+                                           placeholder="Last Name" name="memberLastName">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                           placeholder="Father's Name">
+                                           placeholder="Father's Name" name="fathersName">
                                 </div>
                                 <div class="col-sm-6">
                                     <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                           placeholder="Mother's Name">
+                                           placeholder="Mother's Name" name="mothersName">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                       placeholder="Email Address">
+                                       placeholder="Email Address" name="memberEmail">
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-5 mb-3 mb-sm-0">
-                                    <input type="date" class="form-control form-control-user" id="DOB" data-placeholder="Date of Birth">
+                                    <input type="date" class="form-control form-control-user" id="DOB" data-placeholder="Date of Birth" name="dateOfBirth">
                                     <style>input[type="date"]::before {
                                             content: attr(data-placeholder);
                                             width: 100%;
@@ -72,35 +73,35 @@
                                 </div>
                                 <div class="col-sm-7">
                                     <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                           placeholder="NID Number">
+                                           placeholder="NID Number" name="nidNumber">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="exampleInputEmail"
-                                       placeholder="Permanent Address">
+                                       placeholder="Permanent Address" name="permanentAddress">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="exampleInputEmail"
-                                       placeholder="Phone Number">
+                                       placeholder="Phone Number" name="phoneNumber">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="exampleInputEmail"
-                                       placeholder="Number of seat">
+                                       placeholder="Number of seat" name="numberOfSeat">
                             </div>
 
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="password" class="form-control form-control-user"
-                                           id="exampleInputPassword" placeholder="Password">
+                                           id="exampleInputPassword" placeholder="Password" name="memberPassword">
                                 </div>
                                 <div class="col-sm-6">
                                     <input type="password" class="form-control form-control-user"
                                            id="exampleRepeatPassword" placeholder="Repeat Password">
                                 </div>
                             </div>
-                            <a href="login.html" class="btn btn-primary btn-user btn-block">
+                            <button type="submit" class="btn btn-primary btn-user btn-block">
                                 Register Account
-                            </a>
+                            </button>
                         </form>
                         <hr>
                     </div>

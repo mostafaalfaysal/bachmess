@@ -45,7 +45,8 @@
 
                 </div>
                 <hr class="divide">
-            <form>
+            <form action="{{route('addingBill')}}" method="POST">
+                @csrf
                 <div class="row justify-content-center animated--grow-in">
 
                     <!-- Earnings (Monthly) Card Example -->
@@ -56,7 +57,7 @@
                                     <div class="col mr-2">
                                         <div class="text-xl-center font-weight-bold text-primary text-uppercase mb-1">
                                             Apartment Rent</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user"></div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user" name="apartmentBill"></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -73,8 +74,8 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xl-center font-weight-bold text-primary text-uppercase mb-1">
-                                            Maintainance Bill</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user"></div>
+                                            Maintenance Bill</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user" name="maintenanceBill"></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -90,7 +91,7 @@
                                     <div class="col mr-2">
                                         <div class="text-xl-center font-weight-bold text-primary text-uppercase mb-1">
                                             Gas Bill</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user"></div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user" name="gasBill"></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -105,8 +106,8 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xl-center font-weight-bold text-primary text-uppercase mb-1">
-                                            Servent Bill</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user"></div>
+                                            Servant Bill</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user" name="servantBill"></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -122,7 +123,7 @@
                                     <div class="col mr-2">
                                         <div class="text-xl-center font-weight-bold text-primary text-uppercase mb-1">
                                             Water Bill</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user"></div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user" name="waterBill"></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -138,7 +139,7 @@
                                     <div class="col mr-2">
                                         <div class="text-xl-center font-weight-bold text-primary text-uppercase mb-1">
                                             Internet Bill</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user"></div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user" name="internetBill"></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -154,7 +155,7 @@
                                     <div class="col mr-2">
                                         <div class="text-xl-center font-weight-bold text-primary text-uppercase mb-1">
                                             Electricity Bill</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user"></div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user" name="electricityBill"></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -184,7 +185,9 @@
     <!-- End of Content Wrapper -->
     <form>
 
-
+</div>
+<div class="col-2 col-sm-3 col-md-2 ">
+    <button type="submit" class="btn btn-dark btn-block justify-content-center">Submit</button>
 </div>
 <!-- End of Page Wrapper -->
 

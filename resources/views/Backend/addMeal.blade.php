@@ -15,28 +15,29 @@
             </head>
             <body>
             <div class="registration-form">
-                <form>
+                <form action="{{route('addingMeal')}}" method="POST">
+                    @csrf
                     <div class="form-group">
-                        <input id="memberID" class="form-control item" type="text" placeholder="Member ID" />
+                        <input id="memberID" class="form-control item" type="text" placeholder="Member ID" name="memberID" />
                     </div>
                     <div class="form-group">
-                        <input id="memberName" class="form-control item" type="text" placeholder="Member Name" />
+                        <input id="memberName" class="form-control item" type="text" placeholder="Member Name" name="memberName"/>
                     </div>
                     <div class="form-group">
-                        <input class="form-control item" type="number" id="amount" placeholder="Amount of Meal">
+                        <input class="form-control item" type="number" id="amount" placeholder="Amount of Meal" name="amountMeals">
                     </div>
                     <div class="form-group">
-                        <input class="form-control item" type="text" id="fineNote" placeholder="Note">
+                        <input class="form-control item" type="text" id="fineNote" placeholder="Note" name="fineNote">
                     </div>
                     <div class="form-group">
-                        <input type="date" class="form-control form-control-user" id="DOB" data-placeholder="Meal Date">
+                        <input type="date" class="form-control form-control-user" id="DOB" data-placeholder="Meal Date" name="mealDate">
                         <style>input[type="date"]::before {
                                 content: attr(data-placeholder);
                                 width: 100%;
                             }
                         </style>
                     </div>
-                    <div class="form-group"><button class="btn btn-primary btn-block create-account" type="button">Submit</button>
+                    <div class="form-group"><button class="btn btn-primary btn-block create-account" type="submit">Submit</button>
                     </div>
                 </form>
             </div>
