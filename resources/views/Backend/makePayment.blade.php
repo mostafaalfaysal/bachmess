@@ -29,11 +29,14 @@
                             <input class="form-control item" type="text" id="fineNote" placeholder="Description">
                         </div>
                         <div class="form-group">
-                            <input type="date" class="form-control form-control-user" id="DOB" data-placeholder="Payment Date">
+                            <div id="floatContainer" class="float-container">
+                            <input type="date" class="form-control form-control-user" id="DOB" name="DOB" data-placeholder="Date    ">
+                            </div>
                             <style>input[type="date"]::before {
                                     content: attr(data-placeholder);
                                     width: 100%;
                                 }
+
                             </style>
                         </div>
                         <div class="form-group"><button class="btn btn-primary btn-block create-account" type="button">Submit</button>

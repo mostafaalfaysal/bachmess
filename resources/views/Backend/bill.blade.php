@@ -73,7 +73,7 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xl-center font-weight-bold text-primary text-uppercase mb-1">
+                                        <div class="text-xl-center font-weight-bold text-success text-uppercase mb-1">
                                             Maintenance Bill</div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user" name="maintenanceBill"></div>
                                     </div>
@@ -89,7 +89,7 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xl-center font-weight-bold text-primary text-uppercase mb-1">
+                                        <div class="text-xl-center font-weight-bold text-warning text-uppercase mb-1">
                                             Gas Bill</div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user" name="gasBill"></div>
                                     </div>
@@ -105,7 +105,7 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xl-center font-weight-bold text-primary text-uppercase mb-1">
+                                        <div class="text-xl-center font-weight-bold text-danger text-uppercase mb-1">
                                             Servant Bill</div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user" name="servantBill"></div>
                                     </div>
@@ -137,7 +137,7 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xl-center font-weight-bold text-primary text-uppercase mb-1">
+                                        <div class="text-xl-center font-weight-bold text-secondary text-uppercase mb-1">
                                             Internet Bill</div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user" name="internetBill"></div>
                                     </div>
@@ -153,7 +153,7 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xl-center font-weight-bold text-primary text-uppercase mb-1">
+                                        <div class="text-xl-center font-weight-bold text-success text-uppercase mb-1">
                                             Electricity Bill</div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800"><input type="text" class="form-control form-control-user" name="electricityBill"></div>
                                     </div>
@@ -186,8 +186,8 @@
     <form>
 
 </div>
-<div class="col-2 col-sm-3 col-md-2 ">
-    <button type="submit" class="btn btn-dark btn-block justify-content-center">Submit</button>
+<div class="col-md-2 d-flex justify-content-center mx-auto">
+    <button type="submit" class="btn btn-dark btn-block d-flex justify-content-center">Submit</button>
 </div>
 <!-- End of Page Wrapper -->
 
