@@ -42,15 +42,16 @@
                                     <h1 class="h2 mb-4 text-success font-weight-bold">BACHMESS</h1>
                                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                 </div>
-                                <form class="user">
+                                <form class="user" action="{{route('adminLogin')}}" method="post">
+                                    @csrf
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user"
-                                               id="exampleInputEmail" aria-describedby="emailHelp"
+                                               name="email" aria-describedby="emailHelp"
                                                placeholder="Enter Email Address...">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user"
-                                               id="exampleInputPassword" placeholder="Password">
+                                               name="password" placeholder="Password">
                                     </div>
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox small">
@@ -59,9 +60,9 @@
                                                 Me</label>
                                         </div>
                                     </div>
-                                    <a href="Backend/master.blade.php" class="btn btn-primary btn-user btn-block">
+                                    <button type="submit" href="Backend/master.blade.php" class="btn btn-primary btn-user btn-block">
                                         Login
-                                    </a>
+                                    </button>
                                 </form>
                                 <hr>
                                 <div class="text-center">

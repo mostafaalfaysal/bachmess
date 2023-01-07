@@ -20,7 +20,11 @@
                             <input id="memberID" class="form-control item" type="text" placeholder="Member ID" />
                         </div>
                         <div class="form-group">
-                            <input id="memberName" class="form-control item" type="text" placeholder="Member Name" />
+                            <select class="form-control item">
+                                @foreach ($members as $member)
+                                    <option>{{ $member->memberFirstName.' '.$member->memberLastName }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="form-group">
                             <input class="form-control item" type="number" id="amount" placeholder="Amount">

@@ -151,7 +151,7 @@
                     <div class="dropdown-list-image mr-3">
                         <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
                              alt="...">
-                        <div class="status-indicator bg-success"></div>
+                        <div class="status-indicator bg-danger"></div>
                     </div>
                     <div>
                         <div class="text-truncate">Am I a good boy? The reason I ask is because someone
@@ -189,7 +189,7 @@
                     Activity Log
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="{{route('logout')}}">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                     Logout
                 </a>

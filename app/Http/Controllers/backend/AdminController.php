@@ -30,20 +30,23 @@ class AdminController extends Controller
         return view('backend.partial.pages.admin.payment');
     }
     public function mealManage(){
-        return view('backend.addMeal');
+        $members = Member::get();
+        return view('backend.addMeal', compact('members'));
     }
     public function adminReport(){
         return view('backend.partial.pages.admin.report');
     }
     public function makePayment(){
-        return view('backend.makePayment');
+        $members = Member::get();
+        return view('backend.makePayment', compact('members'));
     }
     public function bills(){
         return view('backend.bill');
 
     }
     public function makeFine(){
-        return view('backend.makeFine');
+        $members = Member::get();
+        return view('backend.makeFine', compact('members'));
     }
     public function mealReport(){
         return view('backend.mealReport');
@@ -91,5 +94,28 @@ class AdminController extends Controller
 
         ]);
         return redirect()->back();
+    }
+    public function login()
+    {
+        return view('backend.login');
+    }
+    public function adminLogin(Request $request){
+//       dd($request->all());
+        $request->validate([
+            'email'=>'required|email',
+            'password'=>'required|min:5'
+        ]);
+
+        $credentials=$request->except('_token');
+        if(auth()->attempt($credentials)){
+            return redirect()->route('adminDash');
+        }
+
+        return redirect()->back()->with('message','Invalid Credentials.');
+    }
+    public function logout()
+    {
+        auth()->logout();
+        return redirect()->route('adminLogin');
     }
 }

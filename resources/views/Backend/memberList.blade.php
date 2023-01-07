@@ -41,8 +41,7 @@
                             <table class="table table-bordered table-success table-hover text-dark" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                 <tr>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
+                                    <th>Name</th>
                                     <th>Email</th>
                                     <th>Father's Name</th>
                                     <th>Mother's Name</th>
@@ -52,8 +51,7 @@
                                 <tbody>
                                 @foreach ($members as $member)
                                     <tr>
-                                        <td>{{ $member->memberFirstName }}</td>
-                                        <td>{{ $member->memberLastName }}</td>
+                                        <td>{{ $member->memberFirstName.' '.$member->memberLastName }}</td>
                                         <td>{{ $member->memberEmail }}</td>
                                         <td>{{ $member->fathersName }}</td>
                                         <td>{{ $member->mothersName }}</td>

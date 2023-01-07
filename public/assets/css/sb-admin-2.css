@@ -10862,7 +10862,7 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url('login.jpeg');
+  background: url("login.jpeg");
   background-position: center;
   background-size: cover;
 }
